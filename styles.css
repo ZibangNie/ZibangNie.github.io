@@ -26,11 +26,11 @@ body::before {
     background: url('AutumnField.jpg') no-repeat center center fixed;
     background-size: cover;
     animation: slideBackground 20s infinite;
-    opacity: 0;
-    transition: opacity 1s ease-in-out; /* 增加平滑过渡 */
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
 }
 
-/* @keyframes 动画，增加平滑的切换 */
+/* 动画 */
 @keyframes slideBackground {
     0% {
         background-image: url('AutumnField.jpg');
@@ -54,32 +54,35 @@ body::before {
     }
 }
 
-/* 头部样式：透明背景 */
+/* 头部样式 */
 header {
     position: fixed;
-    top: 0;
-    left: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 50px 20px;
-    background: rgba(0, 0, 0, 0); /* 确保背景完全透明 */
+    background: rgba(0, 0, 0, 0);
     z-index: 100;
     flex-direction: column;
     text-align: center;
+    height: 100%;
 }
 
-/* Logo 和文本 */
+/* 居中内容 */
 header .logo-container {
     display: flex;
     align-items: center;
     flex-direction: column;
+    justify-content: center;
 }
 
 header .logo {
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 230px;
     margin-bottom: 10px;
 }
 
@@ -98,7 +101,11 @@ header p {
 nav ul {
     list-style: none;
     display: flex;
-    margin-top: 30px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 nav ul li {
@@ -109,14 +116,24 @@ nav ul li a {
     text-decoration: none;
     color: white;
     font-size: 1.5em;
-    padding: 15px;
-    background-color: rgba(0, 0, 0, 0.6); /* 半透明背景 */
-    border-radius: 10px;
-    transition: background-color 0.3s ease;
+    padding: 15px 30px;
+    border: 2px solid white;
+    border-radius: 25px;
+    background-color: transparent;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: block;
+    text-align: center;
+    min-width: 160px;
 }
 
 nav ul li a:hover {
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: white;
+    color: black;
+}
+
+nav ul li a:active {
+    background-color: transparent;
+    color: white;
 }
 
 /* 主内容部分 */
@@ -126,7 +143,7 @@ nav ul li a:hover {
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin-top: 150px;
+    margin-top: 0;
 }
 
 .main-content p {

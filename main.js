@@ -17,3 +17,13 @@ window.onload = function() {
         'Sunset.jpg'
     ]);
 };
+
+// 点击按钮显示个人主页
+document.querySelector('.home-button').addEventListener('click', function() {
+    // 隐藏主页面内容
+    document.querySelector('.main-content').classList.add('hidden');
+    
+    // 显示个人主页内容
+    const homePage = document.getElementById('homePage');
+    homePage.classList.add('show');
+});
