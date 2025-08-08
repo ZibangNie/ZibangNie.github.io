@@ -1,0 +1,159 @@
+/* 基本样式 */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    overflow: hidden;
+}
+
+/* 背景滑动效果 */
+body {
+    position: relative;
+    overflow: hidden;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('AutumnField.jpg') no-repeat center center fixed;
+    background-size: cover;
+    animation: slideBackground 20s infinite;
+    opacity: 0;
+    transition: opacity 1s ease-in-out; /* 增加平滑过渡 */
+}
+
+/* @keyframes 动画，增加平滑的切换 */
+@keyframes slideBackground {
+    0% {
+        background-image: url('AutumnField.jpg');
+        opacity: 1;
+    }
+    25% {
+        background-image: url('WinterForrest.jpg');
+        opacity: 1;
+    }
+    50% {
+        background-image: url('DessertLake.jpg');
+        opacity: 1;
+    }
+    75% {
+        background-image: url('WinterHub.jpg');
+        opacity: 1;
+    }
+    100% {
+        background-image: url('Sunset.jpg');
+        opacity: 1;
+    }
+}
+
+/* 头部样式：透明背景 */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    background: rgba(0, 0, 0, 0); /* 确保背景完全透明 */
+    z-index: 100;
+    flex-direction: column;
+    text-align: center;
+}
+
+/* Logo 和文本 */
+header .logo-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+header .logo {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+    font-weight: bold;
+}
+
+header p {
+    font-size: 1.2em;
+    font-style: italic;
+}
+
+/* 导航栏样式 */
+nav ul {
+    list-style: none;
+    display: flex;
+    margin-top: 30px;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5em;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.6); /* 半透明背景 */
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* 主内容部分 */
+.main-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 150px;
+}
+
+.main-content p {
+    font-size: 2em;
+    font-style: italic;
+    font-weight: bold;
+}
+
+/* 底部社交图标 */
+footer {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.footer-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.footer-icons .social-icon {
+    width: 40px;
+    height: 40px;
+    margin: 0 15px;
+    transition: transform 0.3s ease;
+}
+
+.footer-icons .social-icon:hover {
+    transform: scale(1.1);
+}
