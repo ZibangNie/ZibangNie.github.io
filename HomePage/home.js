@@ -1,5 +1,4 @@
-// JavaScript for smooth animation and content display
-window.onload = function() {
-    const homePage = document.querySelector('.home-container');
-    homePage.classList.add('fadeIn');
-};
+// 页面就绪时，触发入场动画
+window.addEventListener("DOMContentLoaded", () => {
+  document.body.classList.add("ready");
+});
