@@ -24,7 +24,7 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('AutumnField.jpg') no-repeat center center fixed;
+    background: url('Background/AutumnField.jpg') no-repeat center center fixed;
     background-size: cover;
     animation: slideBackground 20s infinite;
     opacity: 1;
@@ -34,23 +34,23 @@ body::before {
 /* 动画 */
 @keyframes slideBackground {
     0% {
-        background-image: url('AutumnField.jpg');
+        background-image: url('Background/AutumnField.jpg');
         opacity: 1;
     }
     25% {
-        background-image: url('WinterForrest.jpg');
+        background-image: url('Background/WinterForrest.jpg');
         opacity: 1;
     }
     50% {
-        background-image: url('DessertLake.jpg');
+        background-image: url('Background/DessertLake.jpg');
         opacity: 1;
     }
     75% {
-        background-image: url('WinterHub.jpg');
+        background-image: url('Background/WinterHub.jpg');
         opacity: 1;
     }
     100% {
-        background-image: url('Sunset.jpg');
+        background-image: url('Background/Sunset.jpg');
         opacity: 1;
     }
 }
