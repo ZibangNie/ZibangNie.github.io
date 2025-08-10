@@ -42,7 +42,7 @@ body::before {
         opacity: 1;
     }
     50% {
-        background-image: url('Background/Background/DessertLake.jpg');
+        background-image: url('Background/DessertLake.jpg');
         opacity: 1;
     }
     75% {
