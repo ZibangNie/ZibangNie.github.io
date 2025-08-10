@@ -118,3 +118,60 @@ body{
   .page{ grid-template-columns: 1fr; }
   .sidebar{ position: static; }
 }
+
+/* === Publications === */
+.pub-list{
+  list-style: none;
+  margin: 6px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 14px;
+}
+.pub-item{
+  border: 1px solid var(--border);
+  background: #fff;
+  border-radius: 12px;
+  padding: 14px 16px;
+}
+.pub-title{
+  margin: 0 0 6px;
+  font-weight: 800;
+  line-height: 1.4;
+  font-size: 16px;
+}
+.venue-badge{
+  display: inline-block;
+  margin-left: 8px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 800;
+  background: #eef2ff;
+  color: #3730a3;
+  vertical-align: middle;
+}
+.pub-authors{
+  margin: 0;
+  color: #4b5563;
+  font-size: 14px;
+}
+.pub-venue{
+  margin: 6px 0 10px;
+  color: #374151;
+  font-size: 14px;
+}
+.pub-actions{ display: flex; gap: 8px; }
+
+.btn-link{
+  display:inline-block;
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 13px;
+  color: #111827;
+  background: #fff;
+  transition: transform .15s ease, background .15s ease;
+}
+.btn-link:hover{ transform: translateY(-1px); background: #f3f4f6; }
