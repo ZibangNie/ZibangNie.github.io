@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zibang Nie — Home</title>
+    <link rel="stylesheet" href="research.css" />
+    <script defer src="research.js"></script>
+</head>
+
+<body>
+
+    <!-- Top Nav -->
+    <header class="topbar">
+        <div class="brand">
+            <a class="brand-home" href="../index.html">← Landing</a>
+            <a class="brand-name" href="#top">Zibang Nie</a>
+        </div>
+        <nav class="nav">
+            <a href="../HomePage/home.html">Home</a>
+            <a href="#research">Research</a>
+            <a href="#projects">Projects</a>
+            <a href="../PublicationPage/publication.html">Publications</a>
+        </nav>
+    </header>
+
+    <!-- Main -->
+    <main id="top" class="page fade-in">
+        <!-- Left Sidebar -->
+        <aside class="sidebar card">
+            <div class="avatar">
+                <img src="../Info/Photo.jpg" alt="Zibang Nie portrait" />
+            </div>
+
+            <h2 class="name">Zibang Nie</h2>
+            <p class="role">Undergraduate Student</p>
+
+            <ul class="info">
+                <li>
+                    <span class="icon">
+                        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                            <path fill="currentColor"
+                                d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z" />
+                        </svg>
+                    </span>
+                    <span>Guitang Rd, Yuhua District, Changsha, China</span>
+                </li>
+                <li>
+                    <span class="icon">🎓</span>
+                    <span>Central South University & University of Dundee</span>
+                </li>
+                <li>
+                    <span class="icon">💻</span>
+                    <span>Computer Science</span>
+                </li>
+                <li>
+                    <span class="icon">📞</span>
+                    <span>+86 173 7581 9888</span>
+                </li>
+                <li id="contact">
+                    <span class="icon">
+                        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                            <path fill="currentColor"
+                                d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm-.5 4.25L12 13 4.5 8.25 3 9.5l9 6 9-6-1.5-1.25z" />
+                        </svg>
+                    </span>
+                    <a href="mailto:2542881@dundee.ac.uk">2542881@dundee.ac.uk</a>
+                </li>
+                <li>
+                    <span class="icon">
+                        <img src="../Logo/GithubLogo.png" alt="" width="18" height="18" />
+                    </span>
+                    <a href="https://github.com/ZibangNie" target="_blank" rel="noopener">GitHub</a>
+                </li>
+            </ul>
+
+            <a class="btn" href="../Info/Zibang_Nie_CV.pdf" download>Download CV</a>
+        </aside>
+
+        <!-- Right Content -->
+        <section class="content">
+
+
+
+            <section id="research1" class="card section">
+                <h2 class="subtitle">Efficient Pipeline-Parallel Training &amp; ViT Adversarial Robustness</h2>
+
+                <p>
+                    <strong>Role &amp; Dates:</strong> Research Assistant (Jun–Sep 2023).
+                    <strong>Focus:</strong> efficient pipeline-parallel training for large Transformers
+                    (<strong>vPipe</strong>) and
+                    robustness of Vision Transformers under adversarial attacks.
+                </p>
+
+                <p>
+                    <strong>Overview.</strong> Implemented and tuned <strong>vPipe</strong> (swap–recompute–partition)
+                    on multi-GPU to
+                    reduce pipeline bubbles and activation memory, built PyTorch <strong>DDP</strong> baselines, and
+                    evaluated
+                    <strong>ViT-Base</strong> vs. <strong>ResNet-18</strong> under <strong>FGSM/I-FGSM</strong> on
+                    <strong>CIFAR-10</strong>.
+                </p>
+
+                <ul>
+                    <li>
+                        <strong>Throughput &amp; scaling.</strong> In internal runs, vPipe achieved approximately
+                        <strong>2×</strong> throughput over PipeDream and enabled training of ~<strong>1.2×</strong>
+                        larger models.
+                    </li>
+                    <li>
+                        <strong>Robustness.</strong> At <em>ε = 0.3</em>, ViT showed ~<strong>50%</strong> less accuracy
+                        drop than the CNN baseline;
+                        explored cross-model transferability and adversarial retraining protocols.
+                    </li>
+                    <li>
+                        <strong>What I did.</strong> Deployed multi-GPU training (DDP), synchronized logging/metrics,
+                        performed partition tuning
+                        and layer migration checks for vPipe; implemented FGSM/I-FGSM sweeps, transfer tests, and
+                        summarized results.
+                    </li>
+                </ul>
+
+                <p>
+                    <strong>Tech Stack:</strong> PyTorch · PyTorch Distributed/<strong>DDP</strong> · CUDA/NCCL ·
+                    CIFAR-10 ·
+                    ViT/ResNet/VGG.
+                </p>
+
+                <p>
+                    <strong>Related outputs:</strong> methods and datasets connected to
+                    <strong>Advanced Engineering Informatics (2024)</strong>,
+                    <strong>IEEE/ASME Transactions on Mechatronics (2025)</strong>, and a
+                    <strong>2025 SSRN preprint</strong>.
+                </p>
+
+                <!-- Image placeholders — replace src with your actual image paths -->
+                <figure class="project-figure">
+                    <img src="../assets/vpipe-overview.png" alt="vPipe pipeline overview (swap–recompute–partition)">
+                    <figcaption>vPipe: swap–recompute–partition with online repartition and reduced pipeline bubbles.
+                    </figcaption>
+                </figure>
+
+                <figure class="project-figure">
+                    <img src="../assets/robustness-curve.png" alt="Adversarial robustness curves on CIFAR-10">
+                    <figcaption>Adversarial robustness: accuracy vs. ε for ViT-Base and ResNet-18 under FGSM/I-FGSM.
+                    </figcaption>
+                </figure>
+
+                <figure class="project-figure">
+                    <img src="../assets/multigpu-setup.png" alt="Multi-GPU training setup and utilization">
+                    <figcaption>DDP multi-GPU setup and utilization profiling during vPipe experiments.</figcaption>
+                </figure>
+            </section>
+
+
+           
+
+            <!-- Contact -->
+            <section id="contact" class="card section">
+                <h2 class="subtitle">Contact</h2>
+                <p>Email: 2542881@dundee.ac.uk</p>
+                <p>Tel: +86 17375819888</p>
+                <p>School address: No.932 South Lushan Road, Changsha Hunan 410083</p>
+            </section>
+
+        </section>
+    </main>
+
+</body>
+
+</html>
