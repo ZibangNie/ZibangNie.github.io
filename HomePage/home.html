@@ -83,14 +83,40 @@
             <!-- About Section -->
             <section id="about" class="card section">
                 <p>
-                    I’m an undergraduate in a dual-degree program at Central South University and the University of Dundee
-                    (expected Jun 2026). My research spans <strong>LLMs</strong>, <strong>NLP</strong>, and <strong>Computer
-                    Vision</strong>—recent work includes <strong>pipeline-parallel training</strong> for large Transformers
-                    (<strong>vPipe</strong>, ~2× over PipeDream), <strong>ViT</strong> adversarial robustness, and <strong>retrieval-augmented LLMs</strong> grounded in domain knowledge.
+                    I’m an undergraduate in a dual-degree program at Central South University and the University of
+                    Dundee
+                    (expected Jun 2026). My research spans <strong>LLMs</strong>, <strong>NLP</strong>, and
+                    <strong>Computer Vision</strong>—recent work includes <strong>pipeline-parallel training</strong>
+                    for large
+                    Transformers (<strong>vPipe</strong>, ~2× over PipeDream), <strong>ViT</strong> adversarial
+                    robustness, and
+                    <strong>retrieval-augmented LLMs</strong> grounded in domain knowledge.
                 </p>
                 <p>
-                    Publications include <strong>Advanced Engineering Informatics (2024)</strong>, <strong>IEEE/ASME Transactions on Mechatronics (2025)</strong>, and
-                    <strong>Applied &amp; Computational Engineering (2024)</strong>, plus an <strong>SSRN preprint (2025, under review)</strong>.
+                    On the vision side, I worked on industrial froth-flotation monitoring: <strong>stereo-vision
+                        imaging</strong> with
+                    <strong>multi-scale cross-attention fusion</strong> for pulp-grade prediction,
+                    <strong>defocus-robust calibration</strong>
+                    using <strong>ROI-Patched MAM-UNet</strong> with progressive training, and <strong>TS-DDPD</strong>
+                    transfer/distillation
+                    for condition recognition.
+                </p>
+                <p>
+                    Publications include <strong>Advanced Engineering Informatics (2024)</strong>, <strong>IEEE/ASME
+                        Transactions on Mechatronics (2025)</strong>,
+                    and <strong>Applied &amp; Computational Engineering (2024)</strong>, plus an <strong>SSRN preprint
+                        (2025, under review)</strong>.
+                </p>
+                <p>
+                    <strong>Core Courses:</strong> Data Structures &amp; Algorithms · Algorithms &amp; Artificial
+                    Intelligence · Computer Systems (2A/2B) ·
+                    Probability &amp; Statistics · Computer Networks &amp; Data Communications · Database Systems ·
+                    Theory of Computation ·
+                    Computer Vision · Computer Graphics · Big Data Analytics.
+                </p>
+                <p>
+                    I’ve also contributed to multiple projects on and off campus—see the <a
+                        href="../ProjectPage/project.html">project page</a> for details.
                 </p>
                 <p><strong>TOEFL iBT: 110/120 · GPA: 3.7/4 (both programs)</strong></p>
             </section>
@@ -99,16 +125,17 @@
             <section id="research" class="card section">
                 <h2 class="subtitle">Research Interests</h2>
                 <p>
-                    • <strong>LLMs + Retrieval</strong>: Integrating specialized knowledge bases with LLMs for accurate, verifiable answers.<br />
-                    • <strong>Vision Robustness</strong>: Understanding ViT vs. CNN behavior under adversarial perturbations; improving reliability.<br />
-                    • <strong>Efficient Training</strong>: Pipeline-parallel strategies for large Transformers to reduce bubbles and memory limits.<br />
-                    • <strong>Applied CV</strong>: Vision systems for industrial froth-flotation monitoring and condition recognition.
+                    • <strong>Natural Language Processing</strong><br />
+                    • <strong>Large Language Models</strong><br />
+                    • <strong>Computer Vision</strong><br />
+                    • <strong>Multimodal Learning</strong><br />
+                    • <strong>Efficient & Scalable ML</strong>
                 </p>
             </section>
 
             <!-- Publications -->
             <section id="publications" class="card section">
-                <h2 class="subtitle">Publications (selected)</h2>
+                <h2 class="subtitle">Publications</h2>
                 <ul class="pub-list">
                     <!-- AEI 2024 -->
                     <li class="pub-item">
@@ -197,19 +224,21 @@
                 </ul>
             </section>
 
-            <!-- Projects -->
+            <!-- Research -->
             <section id="projects" class="card section">
-                <h2 class="subtitle">Projects & Research</h2>
+                <h2 class="subtitle">Research</h2>
 
                 <p><strong>Efficient Pipeline-Parallel Training & ViT Adversarial Robustness</strong> (Research
                     Assistant, Jun–Sep 2023)<br />
                     Implemented <em>vPipe</em> (swap-recompute-partition) on multi-GPU; achieved ~2× throughput over
-                    PipeDream and enabled 1.2× larger models. Evaluated ViT-Base vs. ResNet-18 under FGSM/I-FGSM on CIFAR-10, observing ~50% less accuracy drop of ViT at ε=0.3.
+                    PipeDream and enabled 1.2× larger models. Evaluated ViT-Base vs. ResNet-18 under FGSM/I-FGSM on
+                    CIFAR-10, observing ~50% less accuracy drop of ViT at ε=0.3.
                 </p>
 
                 <p><strong>LLMs with Specialized Knowledge Bases</strong> (Research Assistant, Dec 2023–Apr 2024)<br />
                     Built a LangChain-based plugin integrating local domain KB with Wenxin Yiyan via text embeddings and
-                    vector similarity search. Improved answer fidelity in physics and law across 10k+ queries; deployed to educational tools and won multiple provincial awards.
+                    vector similarity search. Improved answer fidelity in physics and law across 10k+ queries; deployed
+                    to educational tools and won multiple provincial awards.
                 </p>
 
                 <p><strong>Deep Learning for NLP Pipeline</strong> (Student Researcher, Mar–Jun 2024)<br />
@@ -220,9 +249,21 @@
                 </p>
 
                 <p><strong>Industrial Froth-Flotation Field Study</strong> (Fan-kou Lead-Zinc Mine, Jul–Aug 2024)<br />
-                    Collected & annotated ~8k high-res froth images and logged process parameters with engineers;
-                    dataset supported
-                    2 SCI papers (AEI 2024; IEEE/ASME T-Mech 2025), 1 preprint, and 2 CN invention patents.
+                    Deployed a binocular rig at rougher cells; synchronized image streams with DCS tags, operator logs,
+                    and lab assays; curated ≈8k high-res froth images; ran evaluations for multi-scale cross-attention
+                    fusion (Video-Transformer),
+                    defocus-robust calibration (ROI-Patched MAM-UNet, progressive training), and TS-DDPD
+                    transfer/distillation.
+                    Papers in AEI’24, T-Mech’25, a 2025 preprint; plus two CN patents (CN118887586A; CN118887587A).
+                </p>
+            </section>
+
+            <!-- Projects -->
+            <section id="Projects" class="card section">
+                <h2 class="subtitle">Projects</h2>
+                <p>
+                    For details, please visit the
+                    <a href="../ProjectPage/project.html">project page</a>.
                 </p>
             </section>
 
@@ -232,7 +273,13 @@
                 <ul>
                     <li>Third-Class Scholarship, Central South University (2023)</li>
                     <li>Outstanding Student, Central South University (2023)</li>
-                    <li>Provincial Third Prize, China College Students Service-Outsourcing Competition (2024)</li>
+                    <li>Provincial Third Prize, 15th China College Students Service-Outsourcing Innovation &
+                        Entrepreneurship Competition (2024)</li>
+                    <li>Provincial Third Prize, China International College Students “Internet+” Innovation &
+                        Entrepreneurship Competition (2024)</li>
+                    <li>Provincial Grant, National Undergraduate Innovation & Entrepreneurship Training Program (2024)
+                    </li>
+
                 </ul>
             </section>
 
