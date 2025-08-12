@@ -224,42 +224,178 @@
 
                 <!-- Image placeholders — replace src with your actual image paths -->
                 <figure class="project-figure">
-                    <img src="../assets/yiyan-arch.png"
-                        alt="System architecture: ingestion, embeddings, Annoy store, router/sub-chains, Flask API">
-                    <figcaption>Architecture: ingestion → embeddings → Annoy → routing &amp; prompting → Flask API →
-                        Yiyan.</figcaption>
+                    <img src="images/Question-handling-process.png"
+                        alt="Question handling process flow including text cache and similarity search">
+                    <figcaption>Question handling process: from text cache management to similarity search and final
+                        answers.</figcaption>
                 </figure>
 
                 <figure class="project-figure">
-                    <img src="../assets/yiyan-retrieval-flow.png"
-                        alt="Retrieval flow and scoring with thresholding and keyword augmentation">
-                    <figcaption>Retrieval flow: top-k with score threshold 0.58 and keyword-augmented backfill.
+                    <img src="images/keywords-extraction.png"
+                        alt="Keyword extraction process with jieba for Chinese and nltk for English keywords">
+                    <figcaption>Keyword extraction: jieba for Chinese, nltk for English with stopword filtering.
                     </figcaption>
                 </figure>
 
                 <figure class="project-figure">
-                    <img src="../assets/yiyan-template.png"
-                        alt="Prompt template assembling query, memory, retrieved chunks, and rules">
-                    <figcaption>Prompt template: query + domain blurb + memory + retrieved chunks + answering rules.
+                    <img src="images/text-buffer.png" alt="Text buffer management in RAG plugin">
+                    <figcaption>Text buffer: storing top-k related vectors and response information for Q/A session.
                     </figcaption>
                 </figure>
 
                 <figure class="project-figure">
-                    <img src="../assets/yiyan-plugin-ui.png"
-                        alt="Plugin demo: Wenxin Yiyan calling the Flask endpoint and rendering grounded answers">
-                    <figcaption>Plugin demo: Yiyan → Flask endpoint → grounded answer with sources.</figcaption>
+                    <img src="images/keyword-module.png" alt="Keyword vector extraction module and comparison">
+                    <figcaption>Keyword module: extraction and vector comparison for efficient search.</figcaption>
+                </figure>
+
+                <figure class="project-figure">
+                    <img src="images/pretrain-module.png" alt="Pre-trained model integration for query vectorization">
+                    <figcaption>Pre-training module: embedding model integration for semantic vectorization.
+                    </figcaption>
+                </figure>
+
+                <figure class="project-figure">
+                    <img src="images/routing-chain-and-specialized-child-chain.png"
+                        alt="Routing chain for problem classification and professional sub-chains">
+                    <figcaption>Routing chain: categorizing queries into specialized sub-chains for precise responses.
+                    </figcaption>
                 </figure>
             </section>
 
+            <section id="research3" class="card section">
+                <h2 class="subtitle">Deep Learning for Natural Language Processing</h2>
 
+                <p>
+                    <strong>Role &amp; Dates:</strong> Student Researcher (Mar–Jun 2024).
+                    <strong>Focus:</strong> Developing an end-to-end pipeline to clean raw text and predict
+                    topics/similarity for ad-tech and fintech datasets using deep learning techniques.
+                </p>
 
-            <!-- Contact -->
-            <section id="contact" class="card section">
-                <h2 class="subtitle">Contact</h2>
-                <p>Email: 2542881@dundee.ac.uk</p>
-                <p>Tel: +86 17375819888</p>
-                <p>School address: No.932 South Lushan Road, Changsha Hunan 410083</p>
+                <p>
+                    <strong>Overview:</strong> The project focused on implementing a pipeline for preprocessing and
+                    analyzing large textual datasets in the fields of ad-tech and fintech. This pipeline aimed to
+                    predict topics and measure document similarity using various natural language processing (NLP)
+                    techniques such as tokenization, stop-word removal, stemming, TF-IDF vectorization, PCA
+                    dimensionality reduction, and similarity measures including Jaccard and Cosine similarity. The
+                    entire workflow was modularized into utility functions in a Python script, with a dataset of more
+                    than 10,000 documents processed and analyzed.
+                </p>
+
+                <ul>
+                    <li>
+                        <strong>Text Preprocessing &amp; Feature Extraction:</strong> Implemented a comprehensive text
+                        preprocessing pipeline that included tokenization, stop-word removal, and stemming using the
+                        <strong>NLTK</strong> library. After preprocessing, the dataset was vectorized using the
+                        <strong>TF-IDF</strong> method, and dimensionality reduction was applied using
+                        <strong>PCA</strong> to improve computational efficiency and model performance.
+                    </li>
+                    <li>
+                        <strong>Similarity Metrics:</strong> Used <strong>Jaccard similarity</strong> and <strong>Cosine
+                            similarity</strong> metrics to measure the similarity between documents based on their
+                        TF-IDF vectors. These metrics helped identify relationships between documents and predict topics
+                        effectively.
+                    </li>
+                    <li>
+                        <strong>Outcome:</strong> The pipeline successfully extracted top keywords for each topic and
+                        achieved a <strong>0.82 macro-F1 score</strong> on previously unseen data, demonstrating the
+                        effectiveness of the preprocessing and vectorization steps in topic prediction. Additionally,
+                        the course project was graded <strong>92/100</strong>, and the completion was certified by Prof.
+                        Patrick Houlihan.
+                    </li>
+                </ul>
+
+                <p>
+                    <strong>What I Did:</strong> I was responsible for designing and implementing the entire pipeline,
+                    starting with text preprocessing and feature extraction, followed by dimensionality reduction and
+                    similarity computation. I also tuned parameters such as PCA components and TF-IDF parameters to
+                    optimize performance. I wrapped the entire workflow into utility functions within a Python file
+                    (utils.py) and handled the processing of over 10,000 documents. Finally, I wrote up the project and
+                    contributed to the final presentation.
+                </p>
+
+                <p>
+                    <strong>Tech Stack:</strong> Python · <strong>NLTK</strong> · <strong>scikit-learn</strong> ·
+                    <strong>Pandas</strong> · <strong>PCA</strong> · <strong>TF-IDF</strong> · <strong>Jaccard</strong>
+                    · <strong>Cosine Similarity</strong>.
+                </p>
+
+                <p>
+                    <strong>Related Outputs:</strong> The methods and datasets developed during this project were used
+                    to write the project report, as well as form the basis for the academic paper I submitted to the
+                    course, which was graded <strong>92/100</strong> by Prof. Patrick Houlihan.
+                </p>
             </section>
+
+            <section id="research4" class="card section">
+                <h2 class="subtitle">Industrial Froth-Flotation Field Study, Fan-kou Lead-Zinc Mine</h2>
+
+                <p>
+                    <strong>Role &amp; Dates:</strong> Student Researcher (Jul–Aug 2024).
+                    <strong>Focus:</strong> Applying computer vision techniques to industrial froth-flotation monitoring
+                    to improve grade prediction in mining operations.
+                </p>
+
+                <p>
+                    <strong>Overview:</strong> The project focused on addressing the challenges of predicting pulp grade
+                    in flotation processes using monocular froth images. Due to poor calibration under defocus
+                    conditions and the transfer issues with pretrained models, the existing monocular imaging methods
+                    were not effective in industrial applications. In this study, we deployed a binocular imaging system
+                    at the rougher cells of a lead-zinc mine, synchronized image streams with plant data, and captured
+                    high-resolution images to create a novel dataset for further algorithmic studies.
+                </p>
+
+                <ul>
+                    <li>
+                        <strong>Problem:</strong> Monocular froth imaging struggled to predict pulp grade, especially
+                        under defocus conditions. Public pretrained models transferred poorly to flotation imagery,
+                        limiting their practical application.
+                    </li>
+                    <li>
+                        <strong>Method:</strong>
+                        <ul>
+                            <li>Deployed a binocular camera rig at rougher flotation cells to capture high-resolution
+                                images of the froth.</li>
+                            <li>Synchronized image streams with DCS tags, operator logs, and lab assays for accurate
+                                data alignment.</li>
+                            <li>Curated a dataset of ≈8,000 high-res froth images that included various operating
+                                conditions and froth behaviors.</li>
+                            <li>Supported algorithmic studies by preparing saliency priors and running evaluations of
+                                multi-scale cross-attention fusion using a Video-Transformer backend for grade
+                                prediction.</li>
+                            <li>Assisted with defocus-robust calibration experiments using the ROI-Patched MAM-UNet and
+                                progressive training techniques to enhance model stability and accuracy under variable
+                                operational conditions.</li>
+                            <li>Implemented TS-DDPD (Transfer/Distillation Training and Parallel Deployment) for robust
+                                cross-domain model training and conducted industrial validation on real zinc rougher
+                                data collected from the field.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Outcome:</strong>
+                        <ul>
+                            <li>The dataset developed in this study is used in AEI 2024, T-Mech 2025, and a 2025
+                                preprint paper.</li>
+                            <li>The research contributed to two Chinese patents (CN118887586A; CN118887587A) related to
+                                froth-image processing and pulp-grade prediction.</li>
+                            <li>Improved vision-based flotation grade prediction by combining binocular imaging and
+                                multi-scale attention fusion, which led to better model robustness and more accurate
+                                grade monitoring.</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <p>
+                    <strong>Tech Stack:</strong> Python · PyTorch · OpenCV · TensorFlow · Multi-GPU training ·
+                    ROI-Patched MAM-UNet · Video-Transformer · TS-DDPD.
+                </p>
+
+                <p>
+                    <strong>Related Outputs:</strong> The methods and datasets developed in this project are connected
+                    to Advanced Engineering Informatics (2024), IEEE/ASME Transactions on Mechatronics (2025), and a
+                    2025 SSRN preprint related to froth image analysis and flotation grade monitoring.
+                </p>
+            </section>
+
 
         </section>
     </main>
