@@ -153,8 +153,105 @@
                 </figure>
             </section>
 
+            <section id="research2" class="card section">
+                <h2 class="subtitle">RAG Plugin for Wenxin Yiyan — Knowledge-Grounded QA</h2>
 
-           
+                <p>
+                    <strong>Role &amp; Dates:</strong> Developer (Jan–Apr 2024).
+                    <strong>Focus:</strong> NLP · <strong>LLMs</strong> · Retrieval-Augmented Generation
+                    (<strong>RAG</strong>) · LangChain.
+                </p>
+
+                <p>
+                    <strong>Overview.</strong> Built an end-to-end plugin that fuses <strong>local physics
+                        corpora</strong> with
+                    <strong>Wenxin Yiyan</strong> via <strong>LangChain</strong> to deliver accurate, source-grounded
+                    answers for
+                    Physics Tournament (IYPT/CUPT) prep. The system ingests <strong>PDF/DOCX/TXT</strong>, performs
+                    <strong>semantic chunking</strong>, computes <strong>HuggingFace embeddings</strong>, and serves
+                    results through a
+                    <strong>Flask</strong> API consumed by Yiyan.
+                </p>
+
+                <ul>
+                    <li>
+                        <strong>Retrieval &amp; Routing.</strong> Two-level router → domain sub-chains; <strong>top-k =
+                            3</strong> with
+                        score threshold <strong>0.58</strong>; <strong>keyword-augmented</strong> vectors backfill
+                        low-score hits;
+                        per-turn <strong>memory</strong> stores Q/A and retrieved snippets.
+                    </li>
+                    <li>
+                        <strong>Vector Store.</strong> <strong>Annoy</strong> (cosine) with local persistence; chunking
+                        via
+                        <strong>RecursiveCharacterTextSplitter</strong> + <strong>NLTKTextSplitter</strong> (hundreds of
+                        tokens per chunk).
+                    </li>
+                    <li>
+                        <strong>Prompting.</strong> Templates combine user query + domain blurb + memory + retrieved
+                        chunks + answering rules
+                        for grounded, verifiable responses.
+                    </li>
+                    <li>
+                        <strong>Integration.</strong> Yiyan → HTTP POST → <strong>Flask</strong> → retrieval &amp;
+                        templating → JSON answer;
+                        logs and simple fallbacks for empty hits.
+                    </li>
+                    <li>
+                        <strong>Testing.</strong> Functional &amp; non-functional tests; parameter sweeps for chunk
+                        size/overlap, embedding model,
+                        and Annoy <em>n_trees / n_jobs</em>; selected
+                        <strong>paraphrase-multilingual-mpnet-base-v2</strong> for production-like runs.
+                    </li>
+                    <li>
+                        <strong>What I did.</strong> Implemented ingestion, indexing &amp; retrieval pipeline; designed
+                        router/sub-chain prompts
+                        and memory; tuned thresholds; built <strong>Flask</strong> endpoints &amp; deployment scripts;
+                        wrote the user manual.
+                    </li>
+                </ul>
+
+                <p>
+                    <strong>Tech Stack:</strong> Python · <strong>LangChain</strong> · <strong>Flask</strong> ·
+                    HuggingFace Embeddings ·
+                    <strong>Annoy</strong> · jieba/NLTK · Wenxin Yiyan API.
+                </p>
+
+                <p>
+                    <strong>Deliverables:</strong> Design spec · User manual · Division-of-work &amp; process docs ·
+                    Slide deck · Working demo.
+                </p>
+
+                <!-- Image placeholders — replace src with your actual image paths -->
+                <figure class="project-figure">
+                    <img src="../assets/yiyan-arch.png"
+                        alt="System architecture: ingestion, embeddings, Annoy store, router/sub-chains, Flask API">
+                    <figcaption>Architecture: ingestion → embeddings → Annoy → routing &amp; prompting → Flask API →
+                        Yiyan.</figcaption>
+                </figure>
+
+                <figure class="project-figure">
+                    <img src="../assets/yiyan-retrieval-flow.png"
+                        alt="Retrieval flow and scoring with thresholding and keyword augmentation">
+                    <figcaption>Retrieval flow: top-k with score threshold 0.58 and keyword-augmented backfill.
+                    </figcaption>
+                </figure>
+
+                <figure class="project-figure">
+                    <img src="../assets/yiyan-template.png"
+                        alt="Prompt template assembling query, memory, retrieved chunks, and rules">
+                    <figcaption>Prompt template: query + domain blurb + memory + retrieved chunks + answering rules.
+                    </figcaption>
+                </figure>
+
+                <figure class="project-figure">
+                    <img src="../assets/yiyan-plugin-ui.png"
+                        alt="Plugin demo: Wenxin Yiyan calling the Flask endpoint and rendering grounded answers">
+                    <figcaption>Plugin demo: Yiyan → Flask endpoint → grounded answer with sources.</figcaption>
+                </figure>
+            </section>
+
+
 
             <!-- Contact -->
             <section id="contact" class="card section">
