@@ -101,6 +101,12 @@
                     transfer/distillation
                     for condition recognition.
                 </p>
+                <p> On the NLP side, I built a <strong>LangChain-based RAG plugin</strong> that integrates a specialized
+                    local knowledge base via <strong>text embeddings</strong>, <strong>vector similarity
+                        search</strong>, and <strong>customized response generation</strong> for more accurate domain
+                    answers, and I’m developing <strong>SLAC (Self-Learning Adaptive Chunker)</strong> for
+                    <strong>structure-aware long-document chunking</strong> with <strong>closed-loop downstream
+                        feedback</strong> to improve retrieval, faithfulness, and verifiable citations in RAG. </p>
                 <p>
                     Publications include <strong>Advanced Engineering Informatics (2024)</strong>, <strong>IEEE/ASME
                         Transactions on Mechatronics (2025)</strong>,
@@ -248,7 +254,8 @@
                     Achieved macro-F1 0.82 on unseen data (course grade 92/100).
                 </p>
 
-                <p><strong>Industrial Froth-Flotation Field Study</strong> (Fan-kou Lead-Zinc Mine, Jul–Aug 2024)<br />
+                <p><strong>Industrial Froth-Flotation Field Study</strong> (Fan-kou Lead-Zinc Mine, July 2024 -
+                    present)<br />
                     Deployed a binocular rig at rougher cells; synchronized image streams with DCS tags, operator logs,
                     and lab assays; curated ≈8k high-res froth images; ran evaluations for multi-scale cross-attention
                     fusion (Video-Transformer),
@@ -256,6 +263,15 @@
                     transfer/distillation.
                     Papers in AEI’24, T-Mech’25, a 2025 preprint; plus two CN patents (CN118887586A; CN118887587A).
                 </p>
+
+                <p><strong>Self-Learning Adaptive Chunker (SLAC) for RAG</strong> (Graduation Design, Sep 2025 -
+                    present)<br /> Built an end-to-end <strong>structure-aware long-document chunking</strong> pipeline:
+                    converted heterogeneous sources (PDF/Docx/TEI; standards, laws, and papers) into a unified
+                    <strong>hierarchical JSON tree</strong>; trained a <strong>Transformer-based structure
+                        reconstructor</strong> and implemented automated structure validation/correction with
+                    LLM-assisted checks and logging; designed an <strong>adaptive chunker</strong> that selects
+                    boundaries and granularity under length constraints and optimizes via <strong>closed-loop downstream
+                        RAG feedback</strong> (retrieval quality, faithfulness, and verifiable citations). </p>
             </section>
 
             <!-- Projects -->
